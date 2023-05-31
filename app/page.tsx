@@ -1,124 +1,194 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({
+      easing: "ease-out-cubic",
+      once: true,
+      duration: 250,
+    });
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <main className="max-w-screen-lg mx-auto px-4 ">
+        <section className=" py-32 flex flex-col justify-center border-b">
+          <div className="flex items-end gap-4">
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="0"
+              className="text-7xl font-bold text-gray-900"
+            >
+              Hello,
+            </h2>
+
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="400"
+              className="text-7xl font-bold text-gray-900"
+            >
+              I&apos;m Luiz Henrique 🖐
+            </h2>
+          </div>
+
+          <h2
+            className="text-4xl font-regular text-gray-700"
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+            I&apos;m a software engineer currently based in Brazil!
           </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
           <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+            className="text-md font-regular text-gray-500 mt-10 w-2/3"
+            data-aos="fade-right"
+            data-aos-delay="800"
           >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+            As of this moment, I&apos;m building projects at{" "}
+            <a
+              href="https://www.linkedin.com/company/hyperlocalholding/"
+              className="underline"
+              target="_blank"
+            >
+              Hyperlocal
+            </a>
+            . I have limited availability for freelance work but I&apos;m always
+            excited for new ideas and projects! You can{" "}
+            <a href="mailto:7henrique18@gmail.com" className="underline">
+              shoot me an email
+            </a>{" "}
+            or hit up on{" "}
+            <a
+              href="https://twitter.com/lui7henrique"
+              target="_blank"
+              className="underline"
+            >
+              Twitter
+            </a>{" "}
+            or{" "}
+            <a
+              href="https://www.linkedin.com/in/luiz-henrique7/"
+              target="_blank"
+              className="underline"
+            >
+              LinkedIn!
+            </a>
           </p>
-        </a>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+        <section className="py-20 border-b">
+          <h3
+            className="text-3xl font-bold text-gray-900"
+            data-aos="fade-right"
+            data-aos-delay="200"
           >
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+            Work
+          </h3>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+          <section className="mt-8 flex-col gap-4 grid grid-cols-3">
+            <div
+              className="col-span-1 rounded-3xl bg-zinc-950 flex flex-col justify-between p-8"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
+              <figure className="rounded-xl overflow-hidden w-16 h-16 relative">
+                <Image src="/logos/uber.png" fill alt="uber-logo" />
+              </figure>
+
+              <div className="mt-20">
+                <h5 className="text-gray-50 font-regular text-md">Uber</h5>
+
+                <h5 className="text-gray-50 font-semibold text-3xl mb-4">
+                  Software Engineer
+                </h5>
+
+                <sup className="text-gray-50 text-xs ">2025 - Currently</sup>
+              </div>
+            </div>
+
+            <div
+              className="col-span-2 rounded-3xl bg-zinc-900 flex flex-col justify-between p-8"
+              data-aos="fade-left"
+              data-aos-delay="500"
+            >
+              <figure className="rounded-xl overflow-hidden w-16 h-16 relative">
+                <Image src="/logos/rocket.png" fill alt="rocket-logo" />
+              </figure>
+
+              <div className="mt-20">
+                <h5 className="text-gray-50 font-regular text-md">
+                  Rocketseat
+                </h5>
+
+                <h5 className="text-gray-50 font-semibold text-3xl mb-4">
+                  Front-end engineer
+                </h5>
+
+                <sup className="text-gray-50 text-xs ">Nov 2023 - Nov 2025</sup>
+              </div>
+            </div>
+
+            <div
+              className="col-span-2 rounded-3xl bg-blue-700 flex flex-col justify-between p-8"
+              data-aos="fade-right"
+              data-aos-delay="600"
+            >
+              <figure className="rounded-xl overflow-hidden w-16 h-16 relative">
+                <Image src="/logos/hyperlocal.jpg" fill alt="hyperlocal-logo" />
+              </figure>
+
+              <div className="mt-20">
+                <h5 className="text-gray-50 font-regular text-md">
+                  Hyperlocal
+                </h5>
+
+                <h5 className="text-gray-50 font-semibold text-3xl mb-4">
+                  Front-end developer
+                </h5>
+
+                <sup className="text-gray-50 text-xs ">Nov 2022 - Nov 2023</sup>
+              </div>
+            </div>
+
+            <div
+              className="col-span-1 rounded-3xl bg-zinc-900 flex flex-col justify-between p-8"
+              data-aos="fade-left"
+              data-aos-delay="700"
+            >
+              <figure className="rounded-xl overflow-hidden w-16 h-16 relative">
+                <Image src="/logos/hubxp.svg" fill alt="hubxp-logo" />
+              </figure>
+
+              <div className="mt-20">
+                <h5 className="text-gray-50 font-regular text-md">hubxp</h5>
+
+                <h5 className="text-gray-50 font-semibold text-3xl mb-4">
+                  Front-end developer
+                </h5>
+
+                <sup className="text-gray-50 text-xs ">Set 2021 - Nov 2022</sup>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section className="py-20 border-b">
+          <h3
+            className="text-3xl font-bold text-gray-900"
+            data-aos="fade-right"
+            data-aos-delay="200"
           >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            Blog
+          </h3>
+
+          <section className="mt-8 flex flex-col gap-4"></section>
+        </section>
+      </main>
+    </>
+  );
 }
