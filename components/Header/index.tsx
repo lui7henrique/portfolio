@@ -1,5 +1,20 @@
 import Link from "next/link";
 
+const nav = [
+  {
+    href: "/resume",
+    label: "Resume",
+  },
+  {
+    href: "/posts",
+    label: "Posts",
+  },
+  {
+    href: "/contact",
+    label: "Contact",
+  },
+];
+
 export const Header = () => {
   return (
     <header className="max-w-screen-lg mx-auto px-4 py-4 flex items-center justify-between">
@@ -8,17 +23,15 @@ export const Header = () => {
       </Link>
 
       <nav className="flex gap-4">
-        <Link href="/resume">
-          <span className="text-sm text-gray-700">Resume</span>
-        </Link>
+        {nav.map((item) => {
+          const { href, label } = item;
 
-        <Link href="/posts">
-          <span className="text-sm text-gray-700">Posts</span>
-        </Link>
-
-        <Link href="/contact">
-          <span className="text-sm text-gray-700">Contact</span>
-        </Link>
+          return (
+            <Link href={href} key={href}>
+              <span className={`text-sm text-gray-700`}>{label}</span>
+            </Link>
+          );
+        })}
       </nav>
     </header>
   );

@@ -1,9 +1,9 @@
 import { Header } from "src/components/Header";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 import "./globals.css";
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={montserrat.className}>
       <body>
         <Header />
         {children}
