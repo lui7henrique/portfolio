@@ -5573,9 +5573,9 @@ export type GetPostSlugByIdQueryVariables = Exact<{
 
 export type GetPostSlugByIdQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', slug: string }> };
 
-export type GetExperienceQueryVariables = Exact<{
+export type GetExperiencesQueryVariables = Exact<{
   first?: InputMaybe<Scalars['Int']['input']>;
 }>;
 
 
-export type GetExperienceQuery = { __typename?: 'Query', experiences: Array<{ __typename?: 'Experience', id: string, startedAt: any, finishedAt: any, companyName: string, companyColor: { __typename?: 'Color', hex: any } }> };
+export type GetExperiencesQuery = { __typename?: 'Query', experiences: Array<{ __typename?: 'Experience', id: string, startedAt: any, finishedAt: any, role: string, companyName: string, description: { __typename?: 'RichText', html: string }, companyColor: { __typename?: 'Color', hex: any } }> };

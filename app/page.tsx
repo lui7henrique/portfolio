@@ -1,55 +1,27 @@
 "use client";
 
-import "aos/dist/aos.css";
-import Aos from "aos";
-import { Suspense, useEffect } from "react";
+import { Suspense } from "react";
 import { BlogSection } from "src/components/BlogSection";
 import { WorkSection } from "src/components/Work";
 
 export default async function Home() {
-  useEffect(() => {
-    Aos.init({
-      easing: "ease-out-cubic",
-      once: true,
-      duration: 250,
-    });
-  }, []);
-
   return (
     <>
       <main className="max-w-screen-lg mx-auto px-4">
         <section className=" py-32 flex flex-col justify-center border-b">
           <div className="flex items-end gap-4">
-            <h2
-              data-aos="fade-down"
-              data-aos-delay="0"
-              className="text-7xl font-bold text-gray-900"
-            >
-              Hello,
-            </h2>
+            <h2 className="text-7xl font-bold text-gray-900">Hello,</h2>
 
-            <h2
-              data-aos="fade-down"
-              data-aos-delay="400"
-              className="text-7xl font-bold text-gray-900 whitespace-nowrap"
-            >
+            <h2 className="text-7xl font-bold text-gray-900 whitespace-nowrap">
               I&apos;m Luiz Henrique 🖐
             </h2>
           </div>
 
-          <h2
-            className="text-4xl font-regular text-gray-700"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
+          <h2 className="text-4xl font-regular text-gray-700">
             I&apos;m a software engineer currently based in Brazil.
           </h2>
 
-          <p
-            className="text-md font-regular text-gray-500 mt-10 w-2/3"
-            data-aos="fade-right"
-            data-aos-delay="800"
-          >
+          <p className="text-md font-regular text-gray-500 mt-10 w-2/3">
             As of this moment, I&apos;m building projects at{" "}
             <a
               href="https://www.linkedin.com/company/hyperlocalholding/"
