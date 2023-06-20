@@ -1,11 +1,9 @@
-import Image from "next/image";
 import { CompanyIcon } from "src/components/CompanyIcon";
 import client from "src/graphql/client";
 import { GetExperiencesQuery } from "src/graphql/generated/graphql";
 import { GET_EXPERIENCES } from "src/graphql/queries";
-import { useCompany } from "src/hooks/company";
 
-export const getExperiences = async () => {
+const getExperiences = async () => {
   const experiences = await client.request<GetExperiencesQuery>(
     GET_EXPERIENCES
   );
@@ -15,7 +13,6 @@ export const getExperiences = async () => {
 
 export default async function Resume() {
   const { experiences } = await getExperiences();
-  const { getColor, getIcon } = useCompany();
 
   return (
     <>
@@ -52,15 +49,7 @@ export default async function Resume() {
 
             <div className="col-span-3 flex flex-col gap-16">
               {experiences.map((experience) => {
-                const {
-                  id,
-                  companyName,
-                  role,
-                  description,
-
-                  startedAt,
-                  finishedAt,
-                } = experience;
+                const { id, companyName, role, description } = experience;
 
                 return (
                   <div className="flex flex-col gap-2" key={id}>

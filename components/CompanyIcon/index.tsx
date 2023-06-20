@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useCompany } from "src/hooks/company";
 
 type CompanyIconProps = {
   companyName: string;
