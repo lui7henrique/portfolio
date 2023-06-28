@@ -12,7 +12,7 @@ export default async function Home() {
           <div className="flex items-end gap-4">
             <h2 className="text-7xl font-bold text-zinc-900">Hello,</h2>
 
-            <h2 className="text-7xl font-bold text-zinc-900 whitespace-nowrap">
+            <h2 className="text-7xl font-bold text-zinc-900 lg:whitespace-normal xl:whitespace-nowrap">
               I&apos;m Luiz Henrique 🖐
             </h2>
           </div>
@@ -20,38 +20,6 @@ export default async function Home() {
           <h2 className="text-4xl font-regular text-zinc-700">
             I&apos;m a software engineer currently based in Brazil.
           </h2>
-
-          <p className="text-md font-regular text-zinc-500 mt-10 w-2/3">
-            As of this moment, I&apos;m building projects at{" "}
-            <a
-              href="https://www.linkedin.com/company/hyperlocalholding/"
-              className="underline"
-              target="_blank"
-            >
-              Hyperlocal
-            </a>
-            . I have limited availability for freelance work but I&apos;m always
-            excited for new ideas and projects! You can{" "}
-            <a href="mailto:7henrique18@gmail.com" className="underline">
-              shoot me an email
-            </a>{" "}
-            or hit up on{" "}
-            <a
-              href="https://twitter.com/lui7henrique"
-              target="_blank"
-              className="underline"
-            >
-              Twitter
-            </a>{" "}
-            or{" "}
-            <a
-              href="https://www.linkedin.com/in/luiz-henrique7/"
-              target="_blank"
-              className="underline"
-            >
-              LinkedIn!
-            </a>
-          </p>
         </section>
 
         <WorkSection />

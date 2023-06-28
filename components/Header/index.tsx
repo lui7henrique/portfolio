@@ -20,7 +20,7 @@ export const Header = () => {
       </Link>
 
       <div className="flex gap-4 items-center">
-        <nav className="flex gap-4 items-center">
+        <nav className="flex gap-4 items-center ">
           {nav.map((item) => {
             const { href, label } = item;
 
