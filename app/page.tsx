@@ -12,7 +12,7 @@ export default async function Home() {
           <div className="flex items-end gap-4">
             <h2 className="text-7xl font-bold text-zinc-900">Hello,</h2>
 
-            <h2 className="text-7xl font-bold text-zinc-900 lg:whitespace-normal xl:whitespace-nowrap">
+            <h2 className="font-bold text-zinc-900 lg:whitespace-normal xl:whitespace-nowrap text-4xl xl:text-7xl">
               I&apos;m Luiz Henrique 🖐
             </h2>
           </div>

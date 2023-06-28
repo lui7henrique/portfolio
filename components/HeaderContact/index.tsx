@@ -16,7 +16,7 @@ const contact = [
   },
   {
     icon: <LinkedinLogo {...icon} />,
-    "aria-label": "My github 😼",
+    "aria-label": "My linkedin",
     href: "https://github.com/lui7henrique",
   },
 ];
