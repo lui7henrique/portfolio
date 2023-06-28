@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Luiz Henrique",
+  title: "About",
   description: "Software Engineer",
 };
 
@@ -21,6 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={montserrat.className}>
+      <head>
+        <link rel="icon" href="/favicon.png" sizes="any" />
+      </head>
+
       <body>
         <Header />
         {children}
