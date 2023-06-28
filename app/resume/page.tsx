@@ -17,7 +17,7 @@ export default async function Resume() {
   return (
     <>
       <main className="max-w-screen-lg mx-auto px-4">
-        <section className=" py-24 flex flex-col justify-center border-b">
+        <section className="py-24 flex flex-col justify-center border-b">
           <div className="flex items-end justify-center gap-4">
             <h1 className="font-bold text-zinc-90 text-6xl lg:text-9xl">
               Resume
@@ -25,14 +25,14 @@ export default async function Resume() {
           </div>
         </section>
 
-        <section className="py-16 flex flex-col gap-4 lg:gap-8">
+        <section className="flex flex-col gap-4 lg:gap-8 py-8 lg:py-16">
           <div className=" grid gap-4 grid-cols-1 lg:grid-cols-4 lg:gap-8">
             <div className="col-span-1">
               <h2 className="text-lg font-semibold text-zinc-800">About me</h2>
             </div>
 
             <div className="col-span-3">
-              <p className="text-zinc-600 text-sm">
+              <p className="text-zinc-600 text-xs lg:text-sm">
                 My name is Luiz Henrique. I&apos;m a software engineer based in
                 São Paulo, brazil. . I&apos;m passionate about developing
                 satisfying interfaces and solutions. I really enjoy consuming
@@ -50,8 +50,15 @@ export default async function Resume() {
             </div>
 
             <div className="col-span-3 flex flex-col gap-8 lg:gap-16">
-              {experiences.map((experience) => {
-                const { id, companyName, role, description } = experience;
+              {experiences.reverse().map((experience) => {
+                const {
+                  id,
+                  companyName,
+                  role,
+                  description,
+                  finishedAt,
+                  startedAt,
+                } = experience;
 
                 return (
                   <div className="flex flex-col gap-2" key={id}>
@@ -59,7 +66,7 @@ export default async function Resume() {
                       <CompanyIcon companyName={companyName} />
 
                       <div className="flex flex-col">
-                        <h5 className="font-semibold text-lg text-zinc-800">
+                        <h5 className="font-semibold  text-zinc-800 text-sm lg:text-lg">
                           {role}
                           <span className="text-zinc-400">, {companyName}</span>
                         </h5>
@@ -74,7 +81,7 @@ export default async function Resume() {
                       dangerouslySetInnerHTML={{
                         __html: description.html,
                       }}
-                      className="prose text-sm w-full max-w-none"
+                      className="prose  w-full max-w-none text-xs lg:text-sm"
                     />
                   </div>
                 );

@@ -9,7 +9,9 @@ export const CompanyIcon = (props: CompanyIconProps) => {
 
   const component: Record<string, JSX.Element> = {
     Hyperlocal: (
-      <figure className={`w-12 h-12 relative rounded-xl bg-blue-700`}>
+      <figure
+        className={`w-10 h-10 relative rounded-xl bg-blue-700 lg:w-12 lg:h-12`}
+      >
         <Image
           src={`/logos/hyperlocal-white.svg`}
           fill
@@ -19,7 +21,9 @@ export const CompanyIcon = (props: CompanyIconProps) => {
       </figure>
     ),
     hubxp: (
-      <figure className={`w-12 h-12 relative rounded-xl bg-zinc-900`}>
+      <figure
+        className={`w-10 h-10 relative rounded-xl bg-zinc-900 lg:w-12 lg:h-12`}
+      >
         <Image
           src={`/logos/hubxp.svg`}
           fill
