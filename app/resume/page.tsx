@@ -19,12 +19,14 @@ export default async function Resume() {
       <main className="max-w-screen-lg mx-auto px-4">
         <section className=" py-24 flex flex-col justify-center border-b">
           <div className="flex items-end justify-center gap-4">
-            <h1 className="text-9xl font-bold text-zinc-900">Resume</h1>
+            <h1 className="font-bold text-zinc-90 text-6xl lg:text-9xl">
+              Resume
+            </h1>
           </div>
         </section>
 
-        <section className="py-16 flex flex-col gap-8">
-          <div className=" grid grid-cols-4 gap-8">
+        <section className="py-16 flex flex-col gap-4 lg:gap-8">
+          <div className=" grid gap-4 grid-cols-1 lg:grid-cols-4 lg:gap-8">
             <div className="col-span-1">
               <h2 className="text-lg font-semibold text-zinc-800">About me</h2>
             </div>
@@ -40,14 +42,14 @@ export default async function Resume() {
             </div>
           </div>
 
-          <div className="py-8 grid grid-cols-4 gap-8">
+          <div className="py-8 grid gap-4 grid-cols-1 lg:grid-cols-4 lg:gap-8">
             <div className="col-span-1">
               <h2 className="text-lg font-semibold text-zinc-800">
                 Experience
               </h2>
             </div>
 
-            <div className="col-span-3 flex flex-col gap-16">
+            <div className="col-span-3 flex flex-col gap-8 lg:gap-16">
               {experiences.map((experience) => {
                 const { id, companyName, role, description } = experience;
 
