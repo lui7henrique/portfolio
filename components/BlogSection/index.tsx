@@ -19,7 +19,7 @@ export const BlogSection = async () => {
   return (
     <section className="py-20 bg-zinc-950">
       <div className="max-w-screen-lg mx-auto px-4 ">
-        <h3 className="text-3xl font-bold text-gray-50">Blog</h3>
+        <h3 className="text-3xl font-bold text-zinc-50">Blog</h3>
 
         <section className="mt-8 grid grid-cols-3 gap-6">
           {posts.reverse().map((post, index) => {

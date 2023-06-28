@@ -10,18 +10,18 @@ export default async function Home() {
       <main className="max-w-screen-lg mx-auto px-4">
         <section className=" py-32 flex flex-col justify-center border-b">
           <div className="flex items-end gap-4">
-            <h2 className="text-7xl font-bold text-gray-900">Hello,</h2>
+            <h2 className="text-7xl font-bold text-zinc-900">Hello,</h2>
 
-            <h2 className="text-7xl font-bold text-gray-900 whitespace-nowrap">
+            <h2 className="text-7xl font-bold text-zinc-900 whitespace-nowrap">
               I&apos;m Luiz Henrique 🖐
             </h2>
           </div>
 
-          <h2 className="text-4xl font-regular text-gray-700">
+          <h2 className="text-4xl font-regular text-zinc-700">
             I&apos;m a software engineer currently based in Brazil.
           </h2>
 
-          <p className="text-md font-regular text-gray-500 mt-10 w-2/3">
+          <p className="text-md font-regular text-zinc-500 mt-10 w-2/3">
             As of this moment, I&apos;m building projects at{" "}
             <a
               href="https://www.linkedin.com/company/hyperlocalholding/"

@@ -40,14 +40,14 @@ const BlogSectionPostCardVertical = (
       <div className="py-4">
         <div className="flex gap-1">
           <Clock color="#6b7280" />
-          <span className="text-xs text-gray-500">{distance}</span>
+          <span className="text-xs text-zinc-500">{distance}</span>
         </div>
 
         <div className="mt-2 flex flex-col gap-1">
-          <h3 className="text-lg font-semibold leading-6 text-gray-50">
+          <h3 className="text-lg font-semibold leading-6 text-zinc-50">
             {heading}
           </h3>
-          <p className="text-gray-400 text-xs line-clamp-3">{abstract}</p>
+          <p className="text-zinc-400 text-xs line-clamp-3">{abstract}</p>
         </div>
       </div>
     </div>
@@ -79,12 +79,12 @@ const BlogSectionPostCardHorizontal = (
       <div className="px-6 w-2/5 flex flex-col justify-end">
         <div className="flex gap-1">
           <Clock color="#6b7280" />
-          <span className="text-xs text-gray-500">{distance}</span>
+          <span className="text-xs text-zinc-500">{distance}</span>
         </div>
 
         <div className="mt-4 flex flex-col gap-1">
-          <h3 className="text-4xl font-semibold text-gray-50">{heading}</h3>
-          <p className="text-gray-500 text-sm line-clamp-3">{abstract}</p>
+          <h3 className="text-4xl font-semibold text-zinc-50">{heading}</h3>
+          <p className="text-zinc-500 text-sm line-clamp-3">{abstract}</p>
         </div>
       </div>
     </div>
