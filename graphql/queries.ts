@@ -25,31 +25,6 @@ export const GET_PROJECTS = gql`
   }
 `;
 
-export const GET_POSTS = gql`
-  query getPosts($stage: Stage! = DRAFT) {
-    posts(stage: $stage) {
-      id
-      heading
-      slug
-      abstract
-      thumbnail {
-        id
-        width
-        height
-        url
-      }
-      updatedAt
-      updatedBy {
-        id
-        name
-        picture
-      }
-      techs
-      categories
-    }
-  }
-`;
-
 export const GET_POST_BY_SLUG = gql`
   query getPostBySlug($slug: String!, $stage: Stage! = DRAFT) {
     posts(where: { slug: $slug }, stage: $stage) {

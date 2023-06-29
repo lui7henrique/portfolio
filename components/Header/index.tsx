@@ -3,12 +3,12 @@ import { HeaderContact } from "../HeaderContact";
 
 const nav = [
   {
-    href: "/resume",
-    label: "Resume",
+    href: "/",
+    label: "About",
   },
   {
-    href: "/posts",
-    label: "Posts",
+    href: "/resume",
+    label: "Resume",
   },
 ];
 
