@@ -1,8 +1,8 @@
 export const Footer = () => {
   return (
-    <footer className="bg-zinc-950 w-full text-zinc-400 text-sm">
-      <div className="border-t border-zinc-900 max-w-screen-lg mx-auto w-full py-4 text-xs [&_a]:underline px-4 text-center">
-        <p>
+    <footer className="w-full px-4">
+      <div className="border-t  max-w-screen-lg mx-auto w-full py-4 text-xs [&_a]:underline  text-center">
+        <p className="text-zinc-600 text-sm ">
           Made with{" "}
           <a href="https://nextjs.org/" target="_blank">
             NextJS

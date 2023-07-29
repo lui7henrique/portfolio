@@ -1,8 +1,13 @@
 import Image from "next/image";
+import { server } from "src/graphql/client";
+import { twMerge } from "tailwind-merge";
+import dayjs from "dayjs";
 
-export const WorkSection = () => {
+export const WorkSection = async () => {
+  const { experiences } = await server.getExperiences();
+
   return (
-    <section className="py-20 border-b">
+    <section className="py-20">
       <h3 className="text-3xl font-bold text-zinc-900">Work</h3>
 
       <p className="text-md font-regular text-zinc-500 mt-4">
@@ -37,38 +42,57 @@ export const WorkSection = () => {
         </a>
       </p>
 
-      <section className="mt-8 flex-col gap-4 grid grid-cols-3">
-        <div className="col-span-2 rounded-3xl bg-blue-700 flex flex-col justify-between p-8">
-          <figure className="rounded-xl overflow-hidden w-16 h-16 relative">
-            <Image src="/logos/hyperlocal.jpg" fill alt="hyperlocal-logo" />
-          </figure>
+      <section className="mt-8 flex-col gap-4 grid grid-cols-1 lg:grid-cols-3">
+        {experiences.reverse().map((experience, index) => {
+          const {
+            companyColor,
+            companyLogo,
+            companyName,
+            role,
+            startedAt,
+            finishedAt,
+          } = experience;
 
-          <div className="mt-20">
-            <h5 className="text-zinc-50 font-regular text-md">Hyperlocal</h5>
+          const colSpan = index % 2 === 0 ? "col-span-2" : "col-span-1";
 
-            <h5 className="text-zinc-50 font-semibold text-3xl mb-4">
-              Front-end developer
-            </h5>
+          const templateFormat = "MMM YYYY";
 
-            <sup className="text-zinc-50 text-xs ">Nov 2022 - Present</sup>
-          </div>
-        </div>
+          const start = dayjs(startedAt).format(templateFormat);
+          const finish = finishedAt
+            ? dayjs(finishedAt).format(templateFormat)
+            : "Current";
 
-        <div className="col-span-1 rounded-3xl bg-zinc-900 flex flex-col justify-between p-8">
-          <figure className="rounded-xl overflow-hidden w-16 h-16 relative">
-            <Image src="/logos/hubxp.svg" fill alt="hubxp-logo" />
-          </figure>
+          return (
+            <div
+              className={twMerge(
+                "rounded-3xl flex flex-col justify-between p-8",
+                colSpan
+              )}
+              key={experience.id}
+              style={{
+                backgroundColor: companyColor.hex,
+              }}
+            >
+              <figure className="rounded-xl overflow-hidden w-16 h-16 relative p-1">
+                <Image src={companyLogo.url} fill alt={companyName} />
+              </figure>
 
-          <div className="mt-20">
-            <h5 className="text-zinc-50 font-regular text-md">hubxp</h5>
+              <div className="mt-20">
+                <h5 className="text-zinc-50 font-regular text-md">
+                  {companyName}
+                </h5>
 
-            <h5 className="text-zinc-50 font-semibold text-3xl mb-4">
-              Front-end developer
-            </h5>
+                <h5 className="text-zinc-50 font-semibold text-3xl mb-4">
+                  {role}
+                </h5>
 
-            <sup className="text-zinc-50 text-xs ">Set 2021 - Nov 2022</sup>
-          </div>
-        </div>
+                <sup className="text-zinc-50 text-xs ">
+                  {start} - {finish}
+                </sup>
+              </div>
+            </div>
+          );
+        })}
       </section>
     </section>
   );

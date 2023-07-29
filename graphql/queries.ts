@@ -78,6 +78,12 @@ export const GET_EXPERIENCES = gql`
       }
       role
       companyName
+      companyColor {
+        hex
+      }
+      companyLogo {
+        url
+      }
     }
   }
 `;
