@@ -905,6 +905,8 @@ export type DocumentVersion = {
 /** Experience at companies, w/ a role description and project(s) that i made in period! */
 export type Experience = Node & {
   __typename?: 'Experience';
+  /** colSpan */
+  colSpan?: Maybe<Scalars['Int']['output']>;
   /** color of company, like logo main color or background */
   companyColor: Color;
   /** company logo (png/svg) */
@@ -1012,6 +1014,7 @@ export type ExperienceConnection = {
 };
 
 export type ExperienceCreateInput = {
+  colSpan?: InputMaybe<Scalars['Int']['input']>;
   companyColor: ColorInput;
   companyLogo: AssetCreateOneInlineInput;
   companyName: Scalars['String']['input'];
@@ -1056,6 +1059,21 @@ export type ExperienceManyWhereInput = {
   OR?: InputMaybe<Array<ExperienceWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']['input']>;
+  colSpan?: InputMaybe<Scalars['Int']['input']>;
+  /** All values greater than the given value. */
+  colSpan_gt?: InputMaybe<Scalars['Int']['input']>;
+  /** All values greater than or equal the given value. */
+  colSpan_gte?: InputMaybe<Scalars['Int']['input']>;
+  /** All values that are contained in given list. */
+  colSpan_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
+  /** All values less than the given value. */
+  colSpan_lt?: InputMaybe<Scalars['Int']['input']>;
+  /** All values less than or equal the given value. */
+  colSpan_lte?: InputMaybe<Scalars['Int']['input']>;
+  /** Any other value that exists and is not equal to the given value. */
+  colSpan_not?: InputMaybe<Scalars['Int']['input']>;
+  /** All values that are not contained in given list. */
+  colSpan_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
   companyLogo?: InputMaybe<AssetWhereInput>;
   companyName?: InputMaybe<Scalars['String']['input']>;
   /** All values containing the given string. */
@@ -1201,6 +1219,8 @@ export type ExperienceManyWhereInput = {
 };
 
 export enum ExperienceOrderByInput {
+  ColSpanAsc = 'colSpan_ASC',
+  ColSpanDesc = 'colSpan_DESC',
   CompanyNameAsc = 'companyName_ASC',
   CompanyNameDesc = 'companyName_DESC',
   CreatedAtAsc = 'createdAt_ASC',
@@ -1220,6 +1240,7 @@ export enum ExperienceOrderByInput {
 }
 
 export type ExperienceUpdateInput = {
+  colSpan?: InputMaybe<Scalars['Int']['input']>;
   companyColor?: InputMaybe<ColorInput>;
   companyLogo?: InputMaybe<AssetUpdateOneInlineInput>;
   companyName?: InputMaybe<Scalars['String']['input']>;
@@ -1247,6 +1268,7 @@ export type ExperienceUpdateManyInlineInput = {
 };
 
 export type ExperienceUpdateManyInput = {
+  colSpan?: InputMaybe<Scalars['Int']['input']>;
   companyColor?: InputMaybe<ColorInput>;
   companyName?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['RichTextAST']['input']>;
@@ -1314,6 +1336,21 @@ export type ExperienceWhereInput = {
   OR?: InputMaybe<Array<ExperienceWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']['input']>;
+  colSpan?: InputMaybe<Scalars['Int']['input']>;
+  /** All values greater than the given value. */
+  colSpan_gt?: InputMaybe<Scalars['Int']['input']>;
+  /** All values greater than or equal the given value. */
+  colSpan_gte?: InputMaybe<Scalars['Int']['input']>;
+  /** All values that are contained in given list. */
+  colSpan_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
+  /** All values less than the given value. */
+  colSpan_lt?: InputMaybe<Scalars['Int']['input']>;
+  /** All values less than or equal the given value. */
+  colSpan_lte?: InputMaybe<Scalars['Int']['input']>;
+  /** Any other value that exists and is not equal to the given value. */
+  colSpan_not?: InputMaybe<Scalars['Int']['input']>;
+  /** All values that are not contained in given list. */
+  colSpan_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
   companyLogo?: InputMaybe<AssetWhereInput>;
   companyName?: InputMaybe<Scalars['String']['input']>;
   /** All values containing the given string. */
@@ -5608,4 +5645,4 @@ export type GetExperiencesQueryVariables = Exact<{
 }>;
 
 
-export type GetExperiencesQuery = { __typename?: 'Query', experiences: Array<{ __typename?: 'Experience', id: string, startedAt: any, finishedAt?: any | null, role: string, companyName: string, description: { __typename?: 'RichText', html: string }, companyColor: { __typename?: 'Color', hex: any }, companyLogo: { __typename?: 'Asset', url: string } }> };
+export type GetExperiencesQuery = { __typename?: 'Query', experiences: Array<{ __typename?: 'Experience', id: string, startedAt: any, finishedAt?: any | null, role: string, colSpan?: number | null, companyName: string, description: { __typename?: 'RichText', html: string }, companyColor: { __typename?: 'Color', hex: any }, companyLogo: { __typename?: 'Asset', url: string } }> };

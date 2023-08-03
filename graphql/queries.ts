@@ -77,6 +77,7 @@ export const GET_EXPERIENCES = gql`
         html
       }
       role
+      colSpan
       companyName
       companyColor {
         hex

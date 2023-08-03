@@ -43,7 +43,7 @@ export const WorkSection = async () => {
       </p>
 
       <section className="mt-8 flex-col gap-4 grid grid-cols-1 lg:grid-cols-3">
-        {experiences.reverse().map((experience, index) => {
+        {experiences.reverse().map((experience) => {
           const {
             companyColor,
             companyLogo,
@@ -51,12 +51,12 @@ export const WorkSection = async () => {
             role,
             startedAt,
             finishedAt,
+            colSpan,
           } = experience;
 
-          const colSpan = index % 2 === 0 ? "col-span-2" : "col-span-1";
+          const colSpanClassName = `col-span-${colSpan}`;
 
           const templateFormat = "MMM YYYY";
-
           const start = dayjs(startedAt).format(templateFormat);
           const finish = finishedAt
             ? dayjs(finishedAt).format(templateFormat)
@@ -66,7 +66,7 @@ export const WorkSection = async () => {
             <div
               className={twMerge(
                 "rounded-3xl flex flex-col justify-between p-8",
-                colSpan
+                colSpanClassName
               )}
               key={experience.id}
               style={{
