@@ -64,12 +64,12 @@ export const WorkSection = async () => {
           return (
             <div
               className={twMerge(
-                "rounded-3xl flex flex-col justify-between p-8",
-                generateColSpanByIndex(index)
+                "rounded-3xl flex flex-col justify-between p-8"
               )}
               key={experience.id}
               style={{
                 backgroundColor: companyColor.hex,
+                gridColumn: generateColSpanByIndex(index),
               }}
             >
               <figure className="rounded-xl overflow-hidden w-16 h-16 relative p-1">
