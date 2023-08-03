@@ -1,9 +1,22 @@
 import { WorkSection } from "src/components/Work";
 
 export const metadata = {
-  title: "About",
+  title: "About me",
   description:
-    "Hello, I'm Luiz Henrique! I'm a software engineer currently based in Brazil.",
+    "Hello, I'm Luiz Henrique! I'm a software engineer currently based in Brazil. 🖐",
+  openGraph: {
+    title: "About me",
+    description:
+      "Hello, I'm Luiz Henrique! I'm a software engineer currently based in Brazil. 🖐",
+    images: [
+      {
+        url: "https://lui7henrique.com/about.png",
+        width: 1280,
+        height: 720,
+        alt: "About me",
+      },
+    ],
+  },
 };
 
 export default async function Home() {

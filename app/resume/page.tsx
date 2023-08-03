@@ -6,6 +6,19 @@ export const metadata = {
   title: "Resume",
   description:
     "A brief resume about my professional life, such as information about myself and professional experiences!",
+  openGraph: {
+    title: "Resume",
+    description:
+      "A brief resume about my professional life, such as information about myself and professional experiences!",
+    images: [
+      {
+        url: "https://lui7henrique.com/resume.png",
+        width: 1280,
+        height: 720,
+        alt: "Resume",
+      },
+    ],
+  },
 };
 
 export default async function Resume() {
