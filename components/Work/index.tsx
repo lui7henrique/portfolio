@@ -2,6 +2,7 @@ import Image from "next/image";
 import { server } from "src/graphql/client";
 import { twMerge } from "tailwind-merge";
 import dayjs from "dayjs";
+import { generateColSpanByIndex } from "src/utils/generateColSpanByIndex";
 
 export const WorkSection = async () => {
   const { experiences } = await server.getExperiences();
@@ -43,7 +44,7 @@ export const WorkSection = async () => {
       </p>
 
       <section className="mt-8 flex-col gap-4 grid grid-cols-1 lg:grid-cols-3">
-        {experiences.reverse().map((experience) => {
+        {experiences.reverse().map((experience, index) => {
           const {
             companyColor,
             companyLogo,
@@ -51,12 +52,10 @@ export const WorkSection = async () => {
             role,
             startedAt,
             finishedAt,
-            colSpan,
           } = experience;
 
-          const colSpanClassName = `col-span-${colSpan}`;
-
           const templateFormat = "MMM YYYY";
+
           const start = dayjs(startedAt).format(templateFormat);
           const finish = finishedAt
             ? dayjs(finishedAt).format(templateFormat)
@@ -66,7 +65,7 @@ export const WorkSection = async () => {
             <div
               className={twMerge(
                 "rounded-3xl flex flex-col justify-between p-8",
-                colSpanClassName
+                generateColSpanByIndex(index)
               )}
               key={experience.id}
               style={{

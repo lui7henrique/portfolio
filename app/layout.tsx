@@ -1,5 +1,6 @@
 import { Header } from "src/components/Header";
 import { Montserrat } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
 
 import "./globals.css";
 import { Footer } from "src/components/Footer";
@@ -22,6 +23,13 @@ export default function RootLayout({
       </head>
 
       <body>
+        <NextTopLoader
+          color="#a1a1aa"
+          initialPosition={0.3}
+          crawlSpeed={200}
+          height={4}
+        />
+
         <Header />
         {children}
         <Footer />

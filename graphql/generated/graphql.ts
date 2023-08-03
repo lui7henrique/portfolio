@@ -5645,4 +5645,4 @@ export type GetExperiencesQueryVariables = Exact<{
 }>;
 
 
-export type GetExperiencesQuery = { __typename?: 'Query', experiences: Array<{ __typename?: 'Experience', id: string, startedAt: any, finishedAt?: any | null, role: string, colSpan?: number | null, companyName: string, description: { __typename?: 'RichText', html: string }, companyColor: { __typename?: 'Color', hex: any }, companyLogo: { __typename?: 'Asset', url: string } }> };
+export type GetExperiencesQuery = { __typename?: 'Query', experiences: Array<{ __typename?: 'Experience', id: string, startedAt: any, finishedAt?: any | null, role: string, companyName: string, description: { __typename?: 'RichText', html: string }, companyColor: { __typename?: 'Color', hex: any }, companyLogo: { __typename?: 'Asset', url: string } }> };
