@@ -43,7 +43,7 @@ export const WorkSection = async () => {
         </a>
       </p>
 
-      <section className="mt-8 flex-col gap-4 grid grid-cols-1 lg:grid-cols-3">
+      <section className="mt-8 flex-col gap-4 flex lg:grid lg:grid-cols-3">
         {experiences.reverse().map((experience, index) => {
           const {
             companyColor,
