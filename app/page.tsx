@@ -3,8 +3,8 @@ import { WorkSection } from "src/components/Work";
 
 const thumbnail = {
   url: "https://lui7henrique.com/about.png",
-  width: 1280,
-  height: 720,
+  width: 1200,
+  height: 630,
   alt: "About me",
 };
 
@@ -17,7 +17,8 @@ const defaultMetadata = {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  twitter: { ...defaultMetadata },
+  themeColor: "#fff",
+  twitter: { ...defaultMetadata, card: "summary_large_image" },
   openGraph: {
     ...defaultMetadata,
     url: "https://lui7henrique.com/",
