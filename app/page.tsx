@@ -9,7 +9,7 @@ const thumbnail = {
 };
 
 const defaultMetadata = {
-  title: "About me",
+  title: "Luiz Henrique • About me",
   description:
     "Hello, I'm Luiz Henrique! I'm a software engineer currently based in Brazil. 🖐",
   images: [thumbnail],
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...defaultMetadata,
     url: "https://lui7henrique.com/",
+    siteName: "Luiz Henrique • About me",
   },
 };
 

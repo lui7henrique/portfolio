@@ -11,7 +11,7 @@ const thumbnail = {
 };
 
 const defaultMetadata = {
-  title: "Resume",
+  title: "Luiz Henrique • Resume",
   description:
     "A brief resume about my professional life, such as information about myself and professional experiences!",
   images: [thumbnail],
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     ...defaultMetadata,
+    siteName: "Luiz Henrique • Resume",
   },
 };
 
