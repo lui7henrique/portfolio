@@ -3,7 +3,7 @@ import { server } from "src/graphql/client";
 import dayjs from "dayjs";
 import { Metadata } from "next";
 
-export const metadat = {
+export const metadata: Metadata = {
   title: "Resume",
   description:
     "A brief resume about my professional life, such as information about myself and professional experiences!",
