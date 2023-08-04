@@ -1,8 +1,9 @@
 import { CompanyIcon } from "src/components/CompanyIcon";
 import { server } from "src/graphql/client";
 import dayjs from "dayjs";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadat = {
   title: "Resume",
   description:
     "A brief resume about my professional life, such as information about myself and professional experiences!",

@@ -1,21 +1,26 @@
+import { Metadata } from "next";
 import { WorkSection } from "src/components/Work";
 
-export const metadata = {
+const thumbnail = {
+  url: "https://lui7henrique.com/about.png",
+  width: 1280,
+  height: 720,
+  alt: "About me",
+};
+
+const defaultMetadata = {
   title: "About me",
   description:
     "Hello, I'm Luiz Henrique! I'm a software engineer currently based in Brazil. 🖐",
+  images: [thumbnail],
+};
+
+export const metadata: Metadata = {
+  ...defaultMetadata,
+  twitter: { ...defaultMetadata },
   openGraph: {
-    title: "About me",
-    description:
-      "Hello, I'm Luiz Henrique! I'm a software engineer currently based in Brazil. 🖐",
-    images: [
-      {
-        url: "https://lui7henrique.com/about.png",
-        width: 1280,
-        height: 720,
-        alt: "About me",
-      },
-    ],
+    ...defaultMetadata,
+    url: "https://lui7henrique.com/",
   },
 };
 
