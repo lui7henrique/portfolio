@@ -3,22 +3,30 @@ import { server } from "src/graphql/client";
 import dayjs from "dayjs";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
+const thumbnail = {
+  url: "https://lui7henrique.com/resume.png",
+  width: 1280,
+  height: 720,
+  alt: "Resume",
+};
+
+const defaultMetadata = {
   title: "Resume",
   description:
     "A brief resume about my professional life, such as information about myself and professional experiences!",
+  images: [thumbnail],
+};
+
+export const metadata: Metadata = {
+  ...defaultMetadata,
+  twitter: {
+    ...defaultMetadata,
+    card: "summary_large_image",
+    site: "@lui7henrique",
+    creator: "@lui7henrique",
+  },
   openGraph: {
-    title: "Resume",
-    description:
-      "A brief resume about my professional life, such as information about myself and professional experiences!",
-    images: [
-      {
-        url: "https://lui7henrique.com/resume.png",
-        width: 1280,
-        height: 720,
-        alt: "Resume",
-      },
-    ],
+    ...defaultMetadata,
   },
 };
 

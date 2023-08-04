@@ -17,8 +17,12 @@ const defaultMetadata = {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  themeColor: "#fff",
-  twitter: { ...defaultMetadata, card: "summary_large_image" },
+  twitter: {
+    ...defaultMetadata,
+    card: "summary_large_image",
+    site: "@lui7henrique",
+    creator: "@lui7henrique",
+  },
   openGraph: {
     ...defaultMetadata,
     url: "https://lui7henrique.com/",
