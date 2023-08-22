@@ -53,9 +53,11 @@ export default async function Resume() {
 
             <div className="col-span-3">
               <p className="text-zinc-600 text-xs lg:text-sm">
-                My name&apos;s Luiz Henrique. I&apos;m a 20 years old software
-                engineer based in São Paulo, Brazil. I&apos;m passionate about
-                developing satisfying interfaces and solutions.
+                I&apos;m Luiz Henrique, a 20-year-old software developer based in São Paulo, Brazil. My journey began at 18 when I dove into the world of web development through online courses, mastering essential tools like React, NodeJS, and React Native. I kickstarted my professional journey as a front-end developer, gaining valuable experience while working on various projects.
+
+                In the last year, I&apos;ve been part of a dynamic company&apos;s banking squad, where I&apos;m currently focused on developing a versatile white-label banking application with a full range of features.
+
+                I&apos;m recognized for my collaborative approach, effective communication, and commitment to continuous self-improvement. Still, I&apos;m actively addressing my tendencies towards anxiety and overthinking to further enhance my professional growth.
               </p>
             </div>
           </div>
