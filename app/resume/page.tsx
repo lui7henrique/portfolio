@@ -116,7 +116,7 @@ export default async function Resume() {
                       dangerouslySetInnerHTML={{
                         __html: description.html,
                       }}
-                      className="prose w-full max-w-none text-sm/6 lg:text-md/6"
+                      className="prose w-full max-w-none text-sm/7 lg:text-md/7"
                     />
                   </div>
                 );
