@@ -79,9 +79,9 @@ export const WorkSection = async () => {
               </figure>
 
               <div className="mt-20">
-                <h5 className="text-zinc-50 font-regular text-md">
+                <h4 className="text-zinc-50 font-regular text-md">
                   {companyName}
-                </h5>
+                </h4>
 
                 <h5 className="text-zinc-50 font-semibold text-3xl mb-4">
                   {role}
