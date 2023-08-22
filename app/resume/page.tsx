@@ -101,12 +101,12 @@ export default async function Resume() {
                       />
 
                       <div className="flex flex-col">
-                        <h3 className="font-semibold  text-zinc-800 text-sm lg:text-lg">
+                        <h3 className="font-bold  text-zinc-950 text-sm lg:text-lg">
                           {role}
-                          <span className="text-zinc-400">, {companyName}</span>
+                          <span className="text-zinc-600 font-semibold">, {companyName}</span>
                         </h3>
 
-                        <span className="text-xs text-zinc-400 uppercase font-semibold tracking-widest">
+                        <span className="text-xs text-zinc-600 uppercase font-semibold tracking-widest">
                           {start} - {finish}
                         </span>
                       </div>
