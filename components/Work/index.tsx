@@ -3,6 +3,7 @@ import { server } from "src/graphql/client";
 import { twMerge } from "tailwind-merge";
 import dayjs from "dayjs";
 import { generateColSpanByIndex } from "src/utils/generateColSpanByIndex";
+import Link from "next/link";
 
 export const WorkSection = async () => {
   const { experiences } = await server.getExperiences();
@@ -62,7 +63,7 @@ export const WorkSection = async () => {
             : "Current";
 
           return (
-            <div
+            <Link
               className={twMerge(
                 "rounded-3xl flex flex-col justify-between p-8"
               )}
@@ -71,6 +72,7 @@ export const WorkSection = async () => {
                 backgroundColor: companyColor.hex,
                 gridColumn: generateColSpanByIndex(index),
               }}
+              href={`/resume#${companyName}`}
             >
               <figure className="rounded-xl overflow-hidden w-16 h-16 relative p-1">
                 <Image src={companyLogo.url} fill alt={companyName} />
@@ -89,7 +91,7 @@ export const WorkSection = async () => {
                   {start} - {finish}
                 </sup>
               </div>
-            </div>
+            </Link>
           );
         })}
       </section>

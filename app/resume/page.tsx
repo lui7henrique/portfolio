@@ -92,7 +92,7 @@ export default async function Resume() {
                   : "Current";
 
                 return (
-                  <div className="flex flex-col gap-2" key={id}>
+                  <section className="flex flex-col gap-2" key={id} id={companyName}>
                     <div className="flex gap-4">
                       <CompanyIcon
                         companyName={companyName}
@@ -118,7 +118,7 @@ export default async function Resume() {
                       }}
                       className="prose w-full max-w-none text-sm/7 lg:text-md/7"
                     />
-                  </div>
+                  </section>
                 );
               })}
             </div>
