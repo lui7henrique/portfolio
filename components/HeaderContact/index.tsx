@@ -11,7 +11,6 @@ const icon = {
 const contact = [
   {
     icon: <GithubLogo {...icon} />,
-    "aria-label": "Luiz Henrique's GitHub Profile",
     href: "https://github.com/lui7henrique",
   },
   {
@@ -26,7 +25,7 @@ export const HeaderContact = () => {
     <div className="flex">
       {contact.map((social) => {
         return (
-          <Link href={social.href} key={social["aria-label"]} target="_blank">
+          <Link href={social.href} key={social["aria-label"]} aria-label={social["aria-label"]} target="_blank">
             <div className="p-2 hover:bg-zinc-100 transition-all rounded-lg">
               {social.icon}
             </div>
