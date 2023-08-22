@@ -9,7 +9,7 @@ export const Footer = () => {
           </a>
           ,{" "}
           <a href="https://tailwindcss.com/" target="_blank">
-            Tailwind
+            TailwindCSS
           </a>{" "}
           and{" "}
           <a href="https://hygraph.com/" target="_blank">
