@@ -16,7 +16,8 @@ export const CompanyIcon = (props: CompanyIconProps) => {
         backgroundColor: companyColor.hex,
       }}
     >
-      <Image src={companyLogo.url} fill alt={companyName} className="p-2" />
+      <Image src={companyLogo.url} alt={companyName} className="p-2" fill sizes="(max-width: 768px) 40px, (max-width: 1200px) 48px"
+      />
     </figure>
   );
 };
