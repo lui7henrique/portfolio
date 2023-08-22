@@ -34,7 +34,7 @@ export default async function Home() {
   return (
     <>
       <main className="max-w-screen-lg mx-auto px-4">
-        <section className="py-32 flex flex-col justify-center items-center border-b select-none">
+        <section className="py-32 flex flex-col justify-center items-center border-b">
           <h2 className="text-6xl font-bold text-zinc-900 ">
             Hello! I&apos;m Luiz Henrique <span>🖐</span>
           </h2>

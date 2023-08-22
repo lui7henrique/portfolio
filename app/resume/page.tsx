@@ -37,7 +37,7 @@ export default async function Resume() {
   return (
     <>
       <main className="max-w-screen-lg mx-auto px-4">
-        <section className="py-24 flex flex-col justify-center border-b select-none">
+        <section className="py-24 flex flex-col justify-center border-b">
           <div className="flex items-end justify-center gap-4">
             <h1 className="font-bold text-zinc-90 text-6xl lg:text-9xl">
               Resume
