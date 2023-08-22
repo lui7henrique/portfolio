@@ -51,14 +51,16 @@ export default async function Resume() {
               <h2 className="text-lg font-semibold text-zinc-800">About me</h2>
             </div>
 
-            <div className="col-span-3">
-              <p className="text-zinc-600 text-xs lg:text-sm">
-                I&apos;m Luiz Henrique, a 20-year-old software developer based in São Paulo, Brazil. My journey began at 18 when I dove into the world of web development through online courses, mastering essential tools like React, NodeJS, and React Native. I kickstarted my professional journey as a front-end developer, gaining valuable experience while working on various projects.
-
-                In the last year, I&apos;ve been part of a dynamic company&apos;s banking squad, where I&apos;m currently focused on developing a versatile white-label banking application with a full range of features.
-
-                I&apos;m recognized for my collaborative approach, effective communication, and commitment to continuous self-improvement. Still, I&apos;m actively addressing my tendencies towards anxiety and overthinking to further enhance my professional growth.
+            <div className="col-span-3 text-zinc-600 text-sm/7 lg:text-md/7 flex flex-col gap-4">
+              <p>
+                I&apos;m Luiz Henrique, a 20-year-old software developer based in São Paulo, Brazil. My journey began at 18 when I dove into the world of web development through online courses, mastering essential tools like <strong>React</strong>, <strong>NodeJS</strong>, and <strong>React Native</strong>. I started my professional journey as a front-end developer, gaining valuable experience while working on various projects.
               </p>
+
+              <p>
+                In the last year, I&apos;ve been part of a dynamic company&apos;s banking squad, where I&apos;m currently focused on developing a versatile white-label banking application with a full range of features.
+              </p>
+
+              <p>I&apos;m recognized for my collaborative approach, effective communication, and commitment to continuous self-improvement. Still, I&apos;m actively addressing my tendencies towards anxiety and overthinking to further enhance my professional growth.</p>
             </div>
           </div>
 
@@ -69,7 +71,7 @@ export default async function Resume() {
               </h2>
             </div>
 
-            <div className="col-span-3 flex flex-col gap-8 lg:gap-16">
+            <div className="col-span-3 flex flex-col gap-8 lg:gap-12">
               {experiences.reverse().map((experience) => {
                 const {
                   id,
@@ -114,7 +116,7 @@ export default async function Resume() {
                       dangerouslySetInnerHTML={{
                         __html: description.html,
                       }}
-                      className="prose w-full max-w-none text-xs lg:text-sm"
+                      className="prose w-full max-w-none text-sm/6 lg:text-md/6"
                     />
                   </div>
                 );

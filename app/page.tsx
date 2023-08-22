@@ -11,7 +11,7 @@ const thumbnail = {
 const defaultMetadata = {
   title: "Luiz Henrique • About me",
   description:
-    "Hello, I'm Luiz Henrique! I'm a software engineer currently based in Brazil. 🖐",
+    "Hello, I'm Luiz Henrique! I'm a software developer currently based in Brazil. 🖐",
   images: [thumbnail],
 };
 
@@ -40,7 +40,7 @@ export default async function Home() {
           </h2>
 
           <h2 className="text-xl lg:text-3xl font-regular text-zinc-700 mt-4">
-            A software engineer currently based in Brazil.
+            A software developer currently based in Brazil.
           </h2>
         </section>
 
