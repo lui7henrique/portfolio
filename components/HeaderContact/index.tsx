@@ -11,6 +11,7 @@ const icon = {
 const contact = [
   {
     icon: <GithubLogo {...icon} />,
+    "aria-label": "Luiz Henrique's Github Profile",
     href: "https://github.com/lui7henrique",
   },
   {
