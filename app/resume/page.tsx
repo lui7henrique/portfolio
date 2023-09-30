@@ -72,7 +72,7 @@ export default async function Resume() {
             </div>
 
             <div className="col-span-3 flex flex-col gap-8 lg:gap-12">
-              {experiences.reverse().map((experience) => {
+              {experiences.map((experience) => {
                 const {
                   id,
                   companyName,

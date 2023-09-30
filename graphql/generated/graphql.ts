@@ -906,7 +906,7 @@ export type DocumentVersion = {
 export type Experience = Node & {
   __typename?: 'Experience';
   /** colSpan */
-  colSpan?: Maybe<Scalars['Int']['output']>;
+  colSpan: Scalars['Int']['output'];
   /** color of company, like logo main color or background */
   companyColor: Color;
   /** company logo (png/svg) */
@@ -1014,7 +1014,7 @@ export type ExperienceConnection = {
 };
 
 export type ExperienceCreateInput = {
-  colSpan?: InputMaybe<Scalars['Int']['input']>;
+  colSpan: Scalars['Int']['input'];
   companyColor: ColorInput;
   companyLogo: AssetCreateOneInlineInput;
   companyName: Scalars['String']['input'];

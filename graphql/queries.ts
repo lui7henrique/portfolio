@@ -69,7 +69,7 @@ export const GET_POST_SLUG_BY_ID = gql`
 
 export const GET_EXPERIENCES = gql`
   query getExperiences($first: Int) {
-    experiences(first: $first) {
+    experiences(first: $first, orderBy: finishedAt_DESC) {
       id
       startedAt
       finishedAt
