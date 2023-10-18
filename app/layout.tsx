@@ -4,6 +4,7 @@ import NextTopLoader from 'nextjs-toploader'
 
 import './globals.css'
 import { Footer } from 'src/components/Footer'
+import { GTag } from 'src/components/GTag'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -20,6 +21,8 @@ export default function RootLayout({
     <html lang="en" className={montserrat.className}>
       <head>
         <link rel="icon" href="/favicon.png" sizes="any" />
+
+        <GTag />
       </head>
 
       <body>
