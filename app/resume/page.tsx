@@ -1,38 +1,38 @@
-import { CompanyIcon } from "src/components/CompanyIcon";
-import { server } from "src/graphql/client";
-import dayjs from "dayjs";
-import { Metadata } from "next";
+import { CompanyIcon } from 'src/components/CompanyIcon'
+import { server } from 'src/graphql/client'
+import dayjs from 'dayjs'
+import { Metadata } from 'next'
 
 const thumbnail = {
-  url: "https://lui7henrique.com/resume.png",
+  url: 'https://lui7henrique.com/resume.png',
   width: 1280,
   height: 720,
-  alt: "Resume",
-};
+  alt: 'Resume',
+}
 
 const defaultMetadata = {
-  title: "Luiz Henrique • Resume",
+  title: 'Luiz Henrique • Resume',
   description:
-    "A brief resume about my professional life, such as information about myself and professional experiences!",
+    'A brief resume about my professional life, such as information about myself and professional experiences!',
   images: [thumbnail],
-};
+}
 
 export const metadata: Metadata = {
   ...defaultMetadata,
   twitter: {
     ...defaultMetadata,
-    card: "summary_large_image",
-    site: "@lui7henrique",
-    creator: "@lui7henrique",
+    card: 'summary_large_image',
+    site: '@lui7henrique',
+    creator: '@lui7henrique',
   },
   openGraph: {
     ...defaultMetadata,
-    siteName: "Luiz Henrique • Resume",
+    siteName: 'Luiz Henrique • Resume',
   },
-};
+}
 
 export default async function Resume() {
-  const { experiences } = await server.getExperiences();
+  const { experiences } = await server.getExperiences()
 
   return (
     <>
@@ -53,14 +53,29 @@ export default async function Resume() {
 
             <div className="col-span-3 text-zinc-600 text-sm/7 lg:text-md/7 flex flex-col gap-4">
               <p>
-                I&apos;m Luiz Henrique, a 20-year-old software developer based in São Paulo, Brazil. My journey began at 18 when I dove into the world of web development through online courses, mastering essential tools like <strong>React</strong>, <strong>NodeJS</strong>, and <strong>React Native</strong>. I started my professional journey as a front-end developer, gaining valuable experience while working on various projects.
+                I&apos;m Luiz Henrique, a 20-year-old software developer based
+                in São Paulo, Brazil. My journey began at 18 when I dove into
+                the world of web development through online courses, mastering
+                essential tools like <strong>React</strong>,{' '}
+                <strong>NodeJS</strong>, and <strong>React Native</strong>. I
+                started my professional journey as a front-end developer,
+                gaining valuable experience while working on various projects.
               </p>
 
               <p>
-                In the last year, I&apos;ve been part of a dynamic company&apos;s banking squad, where I&apos;m currently focused on developing a versatile white-label banking application with a full range of features.
+                In the last year, I&apos;ve been part of a dynamic
+                company&apos;s banking squad, where I&apos;m currently focused
+                on developing a versatile white-label banking application with a
+                full range of features.
               </p>
 
-              <p>I&apos;m recognized for my collaborative approach, effective communication, and commitment to continuous self-improvement. Still, I&apos;m actively addressing my tendencies towards anxiety and overthinking to further enhance my professional growth.</p>
+              <p>
+                I&apos;m recognized for my collaborative approach, effective
+                communication, and commitment to continuous self-improvement.
+                Still, I&apos;m actively addressing my tendencies towards
+                anxiety and overthinking to further enhance my professional
+                growth.
+              </p>
             </div>
           </div>
 
@@ -82,17 +97,21 @@ export default async function Resume() {
                   description,
                   finishedAt,
                   startedAt,
-                } = experience;
+                } = experience
 
-                const templateFormat = "MMM YYYY";
+                const templateFormat = 'MMM YYYY'
 
-                const start = dayjs(startedAt).format(templateFormat);
+                const start = dayjs(startedAt).format(templateFormat)
                 const finish = finishedAt
                   ? dayjs(finishedAt).format(templateFormat)
-                  : "Current";
+                  : 'Current'
 
                 return (
-                  <section className="flex flex-col gap-2" key={id} id={companyName}>
+                  <section
+                    className="flex flex-col gap-2"
+                    key={id}
+                    id={companyName}
+                  >
                     <div className="flex gap-4">
                       <CompanyIcon
                         companyName={companyName}
@@ -103,7 +122,9 @@ export default async function Resume() {
                       <div className="flex flex-col">
                         <h3 className="font-bold  text-zinc-950 text-sm lg:text-lg">
                           {role}
-                          <span className="text-zinc-600 font-semibold">, {companyName}</span>
+                          <span className="text-zinc-600 font-semibold">
+                            , {companyName}
+                          </span>
                         </h3>
 
                         <span className="text-xs text-zinc-600 uppercase font-semibold tracking-widest">
@@ -119,12 +140,12 @@ export default async function Resume() {
                       className="prose w-full max-w-none text-sm/7 lg:text-md/7"
                     />
                   </section>
-                );
+                )
               })}
             </div>
           </div>
         </section>
       </main>
     </>
-  );
+  )
 }
