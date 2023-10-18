@@ -1,19 +1,19 @@
-import Image from "next/image";
-import { server } from "src/graphql/client";
-import { twMerge } from "tailwind-merge";
-import dayjs from "dayjs";
-import { generateColSpanByIndex } from "src/utils/generateColSpanByIndex";
-import Link from "next/link";
+import Image from 'next/image'
+import { server } from 'src/graphql/client'
+import { twMerge } from 'tailwind-merge'
+import dayjs from 'dayjs'
+import { generateColSpanByIndex } from 'src/utils/generateColSpanByIndex'
+import Link from 'next/link'
 
 export const WorkSection = async () => {
-  const { experiences } = await server.getExperiences();
+  const { experiences } = await server.getExperiences()
 
   return (
     <section className="py-20">
       <h3 className="text-3xl font-bold text-zinc-900">Work</h3>
 
       <p className="text-md font-regular text-zinc-500 mt-4">
-        As of this moment, I&apos;m building projects at{" "}
+        As of this moment, I&apos;m building projects at{' '}
         <a
           href="https://www.linkedin.com/company/hyperlocalholding/"
           className="underline"
@@ -22,19 +22,19 @@ export const WorkSection = async () => {
           Hyperlocal
         </a>
         . I have limited availability for freelance work but I&apos;m always
-        excited for new ideas and projects! You can{" "}
+        excited for new ideas and projects! You can{' '}
         <a href="mailto:7henrique18@gmail.com" className="underline">
           shoot me an email
-        </a>{" "}
-        or hit up on{" "}
+        </a>{' '}
+        or hit up on{' '}
         <a
           href="https://twitter.com/lui7henrique"
           target="_blank"
           className="underline"
         >
           Twitter
-        </a>{" "}
-        or{" "}
+        </a>{' '}
+        or{' '}
         <a
           href="https://www.linkedin.com/in/luiz-henrique7/"
           target="_blank"
@@ -53,19 +53,19 @@ export const WorkSection = async () => {
             role,
             startedAt,
             finishedAt,
-          } = experience;
+          } = experience
 
-          const templateFormat = "MMM YYYY";
+          const templateFormat = 'MMM YYYY'
 
-          const start = dayjs(startedAt).format(templateFormat);
+          const start = dayjs(startedAt).format(templateFormat)
           const finish = finishedAt
             ? dayjs(finishedAt).format(templateFormat)
-            : "Current";
+            : 'Current'
 
           return (
             <Link
               className={twMerge(
-                "rounded-3xl flex flex-col justify-between p-8"
+                'rounded-3xl flex flex-col justify-between p-8',
               )}
               key={experience.id}
               style={{
@@ -92,9 +92,9 @@ export const WorkSection = async () => {
                 </sup>
               </div>
             </Link>
-          );
+          )
         })}
       </section>
     </section>
-  );
-};
+  )
+}

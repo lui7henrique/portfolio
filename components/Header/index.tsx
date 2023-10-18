@@ -1,16 +1,16 @@
-import Link from "next/link";
-import { HeaderContact } from "../HeaderContact";
+import Link from 'next/link'
+import { HeaderContact } from '../HeaderContact'
 
 const nav = [
   {
-    href: "/",
-    label: "About",
+    href: '/',
+    label: 'About',
   },
   {
-    href: "/resume",
-    label: "Resume",
+    href: '/resume',
+    label: 'Resume',
   },
-];
+]
 
 export const Header = () => {
   return (
@@ -22,18 +22,18 @@ export const Header = () => {
       <div className="flex gap-4 items-center">
         <nav className="flex gap-4 items-center ">
           {nav.map((item) => {
-            const { href, label } = item;
+            const { href, label } = item
 
             return (
               <Link href={href} key={href}>
                 <span className={`text-sm  text-zinc-700`}>{label}</span>
               </Link>
-            );
+            )
           })}
         </nav>
 
         <HeaderContact />
       </div>
     </header>
-  );
-};
+  )
+}

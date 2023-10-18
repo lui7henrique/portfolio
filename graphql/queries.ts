@@ -1,4 +1,4 @@
-import { gql } from "graphql-request";
+import { gql } from 'graphql-request'
 
 export const GET_PROJECTS = gql`
   query getProjects($first: Int) {
@@ -23,7 +23,7 @@ export const GET_PROJECTS = gql`
       techs
     }
   }
-`;
+`
 
 export const GET_POST_BY_SLUG = gql`
   query getPostBySlug($slug: String!, $stage: Stage! = DRAFT) {
@@ -57,7 +57,7 @@ export const GET_POST_BY_SLUG = gql`
       categories
     }
   }
-`;
+`
 
 export const GET_POST_SLUG_BY_ID = gql`
   query getPostSlugById($id: ID!, $stage: Stage! = DRAFT) {
@@ -65,7 +65,7 @@ export const GET_POST_SLUG_BY_ID = gql`
       slug
     }
   }
-`;
+`
 
 export const GET_EXPERIENCES = gql`
   query getExperiences($first: Int) {
@@ -86,4 +86,4 @@ export const GET_EXPERIENCES = gql`
       }
     }
   }
-`;
+`

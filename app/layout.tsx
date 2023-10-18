@@ -1,20 +1,20 @@
-import { Header } from "src/components/Header";
-import { Montserrat } from "next/font/google";
-import NextTopLoader from "nextjs-toploader";
+import { Header } from 'src/components/Header'
+import { Montserrat } from 'next/font/google'
+import NextTopLoader from 'nextjs-toploader'
 
-import "./globals.css";
-import { Footer } from "src/components/Footer";
+import './globals.css'
+import { Footer } from 'src/components/Footer'
 
 const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" className={montserrat.className}>
@@ -35,5 +35,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  );
+  )
 }
