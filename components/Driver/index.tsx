@@ -28,7 +28,6 @@ const driverObj = driver({
 })
 
 export const Driver = () => {
-  console.log('ai tesao')
   useEffect(() => {
     driverObj.drive()
   }, [])
