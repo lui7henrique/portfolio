@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import { Driver } from 'src/components/Driver'
+
 import { WorkSection } from 'src/components/Work'
 
 const thumbnail = {
@@ -35,7 +37,7 @@ export default async function Home() {
     <>
       <main className="max-w-screen-lg mx-auto px-4">
         <section className="py-32 flex flex-col justify-center items-center border-b">
-          <h2 className="text-6xl font-bold text-zinc-900 ">
+          <h2 className="text-6xl font-bold text-zinc-900" id="name">
             Hello! I&apos;m Luiz Henrique <span>🖐</span>
           </h2>
 
@@ -46,6 +48,8 @@ export default async function Home() {
 
         <WorkSection />
       </main>
+
+      <Driver />
     </>
   )
 }

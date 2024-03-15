@@ -5,12 +5,16 @@ import dayjs from 'dayjs'
 import { generateColSpanByIndex } from 'src/utils/generateColSpanByIndex'
 import Link from 'next/link'
 
+import { useEffect } from 'react'
+
 export const WorkSection = async () => {
   const { experiences } = await server.getExperiences()
 
   return (
     <section className="py-20">
-      <h3 className="text-3xl font-bold text-zinc-900">Work</h3>
+      <h3 className="text-3xl font-bold text-zinc-900" id="work">
+        Work
+      </h3>
 
       <p className="text-md font-regular text-zinc-500 mt-4">
         As of this moment, I&apos;m building projects at{' '}
@@ -73,6 +77,7 @@ export const WorkSection = async () => {
                 gridColumn: generateColSpanByIndex(index),
               }}
               href={`/resume#${companyName}`}
+              id={companyName}
             >
               <figure className="rounded-xl overflow-hidden w-16 h-16 relative p-1">
                 <Image src={companyLogo.url} fill alt={companyName} />
