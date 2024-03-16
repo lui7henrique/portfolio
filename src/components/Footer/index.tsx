@@ -1,8 +1,8 @@
 export const Footer = () => {
   return (
     <footer className="w-full px-4">
-      <div className="border-t  max-w-screen-lg mx-auto w-full py-4 text-xs [&_a]:underline  text-center">
-        <p className="text-zinc-600 text-sm ">
+      <div className="border-t max-w-screen-lg mx-auto w-full py-4 [&_a]:underline text-center">
+        <p className="text-muted-foreground text-xs">
           Made with{' '}
           <a href="https://nextjs.org/" target="_blank">
             NextJS
@@ -15,14 +15,13 @@ export const Footer = () => {
           <a href="https://hygraph.com/" target="_blank">
             Hygraphy
           </a>
-          . The source code is available on
+          . The source code is available on{' '}
           <a
             href="https://github.com/lui7henrique/web-portfolio"
             target="_blank"
             className="underline"
           >
-            {' '}
-            Github
+            Github.
           </a>
         </p>
       </div>

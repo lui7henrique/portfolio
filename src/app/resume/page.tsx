@@ -1,5 +1,5 @@
-import { CompanyIcon } from 'src/components/CompanyIcon'
-import { server } from 'src/graphql/client'
+import { CompanyIcon } from '@/components/CompanyIcon'
+import { server } from '@/graphql/client'
 import dayjs from 'dayjs'
 import { Metadata } from 'next'
 
@@ -36,22 +36,20 @@ export default async function Resume() {
 
   return (
     <>
-      <main className="max-w-screen-lg mx-auto px-4">
+      <main className="max-w-screen-lg mx-auto px-4 lowercase">
         <section className="py-24 flex flex-col justify-center border-b">
           <div className="flex items-end justify-center gap-4">
-            <h1 className="font-bold text-zinc-90 text-6xl lg:text-9xl">
-              Resume
-            </h1>
+            <h1 className="text-5xl">my resume</h1>
           </div>
         </section>
 
         <section className="flex flex-col gap-4 lg:gap-8 py-8 lg:py-16">
           <div className=" grid gap-4 grid-cols-1 lg:grid-cols-4 lg:gap-8">
             <div className="col-span-1">
-              <h2 className="text-lg font-semibold text-zinc-800">About me</h2>
+              <h2 className="text-lg font-semibold">about me</h2>
             </div>
 
-            <div className="col-span-3 text-zinc-600 text-sm/7 lg:text-md/7 flex flex-col gap-4">
+            <div className="col-span-3 text-muted-foreground flex flex-col gap-4 leading-7 text-sm">
               <p>
                 I&apos;m Luiz Henrique, a 20-year-old software developer based
                 in São Paulo, Brazil. My journey began at 18 when I dove into
@@ -60,13 +58,6 @@ export default async function Resume() {
                 <strong>NodeJS</strong>, and <strong>React Native</strong>. I
                 started my professional journey as a front-end developer,
                 gaining valuable experience while working on various projects.
-              </p>
-
-              <p>
-                In the last year, I&apos;ve been part of a dynamic
-                company&apos;s banking squad, where I&apos;m currently focused
-                on developing a versatile white-label banking application with a
-                full range of features.
               </p>
 
               <p>
@@ -81,9 +72,7 @@ export default async function Resume() {
 
           <div className="py-8 grid gap-4 grid-cols-1 lg:grid-cols-4 lg:gap-8">
             <div className="col-span-1">
-              <h2 className="text-lg font-semibold text-zinc-800">
-                Experience
-              </h2>
+              <h2 className="text-lg font-semibold">Experience</h2>
             </div>
 
             <div className="col-span-3 flex flex-col gap-8 lg:gap-12">
@@ -120,14 +109,12 @@ export default async function Resume() {
                       />
 
                       <div className="flex flex-col">
-                        <h3 className="font-bold  text-zinc-950 text-sm lg:text-lg">
+                        <h3 className="font-bold text-sm lg:text-lg">
                           {role}
-                          <span className="text-zinc-600 font-semibold">
-                            , {companyName}
-                          </span>
+                          <span className="font-semibold">, {companyName}</span>
                         </h3>
 
-                        <span className="text-xs text-zinc-600 uppercase font-semibold tracking-widest">
+                        <span className="text-xs uppercase font-semibold tracking-widest text-muted-foreground">
                           {start} - {finish}
                         </span>
                       </div>
@@ -137,7 +124,7 @@ export default async function Resume() {
                       dangerouslySetInnerHTML={{
                         __html: description.html,
                       }}
-                      className="prose w-full max-w-none text-sm/7 lg:text-md/7"
+                      className="prose w-full max-w-none text-sm/7 text-muted-foreground"
                     />
                   </section>
                 )

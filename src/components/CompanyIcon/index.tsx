@@ -1,5 +1,5 @@
+import { GetExperiencesQuery } from '@/graphql/generated/graphql'
 import Image from 'next/image'
-import { GetExperiencesQuery } from 'src/graphql/generated/graphql'
 
 type CompanyIconProps = Pick<
   GetExperiencesQuery['experiences'][0],

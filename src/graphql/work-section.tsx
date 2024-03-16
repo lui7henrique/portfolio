@@ -1,19 +1,21 @@
 import Image from 'next/image'
-import { server } from 'src/graphql/client'
-import { twMerge } from 'tailwind-merge'
 import dayjs from 'dayjs'
-import { generateColSpanByIndex } from 'src/utils/generateColSpanByIndex'
+
+import { twMerge } from 'tailwind-merge'
+import { server } from '@/graphql/client'
+
 import Link from 'next/link'
+import { generateColSpanByIndex } from '@/utils/generateColSpanByIndex'
 
 export const WorkSection = async () => {
   const { experiences } = await server.getExperiences()
 
   return (
     <section className="py-20">
-      <h3 className="text-3xl font-bold text-zinc-900">Work</h3>
+      <h3 className="text-2xl font-bold">work</h3>
 
-      <p className="text-md font-regular text-zinc-500 mt-4">
-        As of this moment, I&apos;m building projects at{' '}
+      <p className="text-sm font-regular text-muted-foreground mt-4">
+        as of this moment, i&apos;m building projects at{' '}
         <a
           href="https://www.linkedin.com/company/hyperlocalholding/"
           className="underline"
@@ -21,8 +23,8 @@ export const WorkSection = async () => {
         >
           Hyperlocal
         </a>
-        . I have limited availability for freelance work but I&apos;m always
-        excited for new ideas and projects! You can{' '}
+        . i have limited availability for freelance work but I&apos;m always
+        excited for new ideas and projects! you can{' '}
         <a href="mailto:7henrique18@gmail.com" className="underline">
           shoot me an email
         </a>{' '}
@@ -32,7 +34,7 @@ export const WorkSection = async () => {
           target="_blank"
           className="underline"
         >
-          Twitter
+          twitter
         </a>{' '}
         or{' '}
         <a
@@ -40,7 +42,7 @@ export const WorkSection = async () => {
           target="_blank"
           className="underline"
         >
-          LinkedIn!
+          linkedIn!
         </a>
       </p>
 
@@ -65,31 +67,38 @@ export const WorkSection = async () => {
           return (
             <Link
               className={twMerge(
-                'rounded-3xl flex flex-col justify-between p-8',
+                'rounded-lg flex flex-col justify-between p-8 border',
               )}
-              key={experience.id}
               style={{
-                backgroundColor: companyColor.hex,
                 gridColumn: generateColSpanByIndex(index),
               }}
+              key={experience.id}
               href={`/resume#${companyName}`}
             >
-              <figure className="rounded-xl overflow-hidden w-16 h-16 relative p-1">
-                <Image src={companyLogo.url} fill alt={companyName} />
-              </figure>
+              <div className="flex">
+                <figure
+                  className="rounded-lg overflow-hidden relative w-16 h-16 flex items-center justify-center"
+                  style={{ backgroundColor: companyColor.hex }}
+                >
+                  <Image
+                    src={companyLogo.url}
+                    alt={companyName}
+                    width={32}
+                    height={32}
+                  />
+                </figure>
+              </div>
 
-              <div className="mt-20">
-                <h4 className="text-zinc-50 font-regular text-md">
+              <div className="mt-12 space-y-2">
+                <h4 className="text-xs text-muted-foreground">
                   {companyName}
+
+                  <span className="ml-2">
+                    • {start} - {finish}
+                  </span>
                 </h4>
 
-                <h5 className="text-zinc-50 font-semibold text-3xl mb-4">
-                  {role}
-                </h5>
-
-                <sup className="text-zinc-50 text-xs ">
-                  {start} - {finish}
-                </sup>
+                <h5 className="font-bold text-xl">{role}</h5>
               </div>
             </Link>
           )

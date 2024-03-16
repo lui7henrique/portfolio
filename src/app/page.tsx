@@ -1,5 +1,5 @@
+import { WorkSection } from '@/graphql/work-section'
 import { Metadata } from 'next'
-import { WorkSection } from 'src/components/Work'
 
 const thumbnail = {
   url: 'https://lui7henrique.com/about.png',
@@ -34,13 +34,15 @@ export default async function Home() {
   return (
     <>
       <main className="max-w-screen-lg mx-auto px-4">
-        <section className="py-32 flex flex-col justify-center items-center border-b">
-          <h2 className="text-6xl font-bold text-zinc-900 ">
-            Hello! I&apos;m Luiz Henrique <span>🖐</span>
+        <section className="h-[50vh] flex flex-col justify-center items-center border-b">
+          <h2 className="text-3xl font-bold">
+            hello <span className="line-through">world</span>! i&apos;m luiz
+            henrique.
           </h2>
 
-          <h2 className="text-xl lg:text-3xl font-regular text-zinc-700 mt-4">
-            A software developer currently based in Brazil.
+          <h2 className="text-md font-regular text-muted-foreground">
+            a software developer passionate about awesome interfaces and
+            experiences.
           </h2>
         </section>
 
